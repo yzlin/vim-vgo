@@ -22,7 +22,7 @@ syn region  vgoComment          start="\/\*" end="\*\/" contains=@vgoCommentGrou
 syn region  vgoComment          start="//" skip="\\$" end="$" keepend contains=@vgoCommentGroup
 syn region  vgoString           start=/"/ skip=/\\./ end=/"/
 syn region  vgoString           start=/'/ skip=/\\./ end=/'/
-syn region  vgoVersion          start=/v/ skip=/\\./ end="$"
+syn match   vgoVersion          /\vv(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-\d+-[0-9a-z]+)?/
 " TODO(zchee): '=>' on vgoVersion
 " syn region  vgoVersionAllow     start=/=/ skip="\\$" end="/>/" contains=@vgoVersion
 
